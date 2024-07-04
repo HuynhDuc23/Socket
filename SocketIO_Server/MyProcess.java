@@ -33,13 +33,13 @@ public class MyProcess extends Thread{
           while (true){
               // nhan tin nhan tu client
               String message ;
-              while((message = reader.readLine()) != null){
+              message = reader.readLine();
                   System.out.println("Client: "+message);
-              }
               // gui tin nhan
               System.out.println("Server : ");
               message= sc.nextLine();
               write.println(message);
+              write.flush();
           }
 
      }catch (Exception ex){
